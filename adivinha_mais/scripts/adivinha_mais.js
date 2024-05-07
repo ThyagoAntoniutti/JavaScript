@@ -11,7 +11,7 @@ function sorteio(){
     Math.round(Math.random() * 10)
 }
 
-function sorteioNumeros(quantidade){
+function sorteiaNumeros(quantidade){
     var segredos = [];
     var numero = 1;
     while (numero <= quantidade){
@@ -23,7 +23,7 @@ function sorteioNumeros(quantidade){
 }
 
 
-var segredos = sorteioNumeros(3);
+var segredos = sorteiaNumeros(3);
 
 console.log(segredos);
 
