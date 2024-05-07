@@ -7,12 +7,12 @@ function mostra(frase) {
     pulaLinha();
 }
 var anoCopa = 1930;
+var limite = parseInt(prompt("Digite a data limite"));
 
-while (anoCopa < 2016) {
-    alert("Houve copa em " + anoCopa);
-    anoCopa = anoCopa + 4; 
-
+while (anoCopa < limite) {
+    mostra("Houve copa em " + anoCopa);
+    anoCopa = anoCopa + 4;
 }
 
-alert("Fim!");
+mostra("Fim!");
 
