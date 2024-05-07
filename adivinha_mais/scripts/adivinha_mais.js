@@ -13,12 +13,14 @@ var input = document.querySelector("input");
 input.focus();
 
 function verificar() {
-    for (var posicao = 0; posicao < 4; posicao++){
+    for (var posicao = 0; posicao < segredos.length; posicao++){
         if (input.value == segredos[posicao]) {
             alert("Você acertou!");
-        }else{
-            alert("Você errou!");
+            break;
         }
+
+        alert("Você errou!");
+        
         input.value = "";
         input.focus();
     } 
