@@ -7,11 +7,21 @@ function mostra(frase) {
     pulaLinha();
 }
 
-var numeroPensado = Math.round(Math.random() * 100);
-var chute = parseInt(prompt("Digite seu chute (números entre 0 e 10): "));
+var numeroPensado = 4;
 
-if (chute == numeroPensado){
-mostra('Você acertou!');
-}else{
-mostra('Você errou. O número correto era ' + numeroPensado + '.');
+var tentativas = 1;
+
+while (tentativas <= 3){
+
+    var chute = parseInt(prompt("Digite seu chute (números entre 0 e 10): "));
+
+    if (chute == numeroPensado){
+        mostra('Você acertou!');
+    }else{
+        mostra('Você errou. Tente novamente');
+    }
+
+    tentativas++;
 }
+
+mostra("Fim!")
