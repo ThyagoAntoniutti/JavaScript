@@ -7,21 +7,37 @@ function mostra(frase) {
     pulaLinha();
 }
 
-function sorteio(){
+function sorteia(){
     Math.round(Math.random() * 10)
 }
 
 function sorteiaNumeros(quantidade){
+
     var segredos = [];
+
     var numero = 1;
+
     while (numero <= quantidade){
-        segredos.push(sorteio());
-        numero++;
+
+        var numeroAleatorio = sorteia();
+        var achou = false;
+
+        for (var posicao = 0; posicao < segredos.length; posicao++){
+            if (segredos[posicao] == numeroAleatorio){
+                achou = true;
+                break;
+            }
+        }
+
+        if (achou == false){
+            segredos.push(numeroAleatorio);
+            numero++;
+        }
+
     }
 
     return segredos;
 }
-
 
 var segredos = sorteiaNumeros(3);
 
