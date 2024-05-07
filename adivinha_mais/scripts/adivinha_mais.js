@@ -7,21 +7,24 @@ function mostra(frase) {
     pulaLinha();
 }
 
-function verificar() {
-    if (input.value == segredo) {
-        alert("Você acertou!");
-    }else{
-        alert("Você errou!");
-    }
-    input.value = "";
-    input.focus();
-}
+var segredos = [5,7,10,2];
 
-mostra("Digite um número entre 1 e 10");
-
-var segredo = Math.round(Math.random() * 10);
 var input = document.querySelector("input");
 input.focus();
-var botao = document.querySelector("button");
 
+function verificar() {
+    for (var posicao = 0; posicao < 4; posicao++){
+        if (input.value == segredos[posicao]) {
+            alert("Você acertou!");
+        }else{
+            alert("Você errou!");
+        }
+        input.value = "";
+        input.focus();
+    } 
+}
+
+
+var botao = document.querySelector("button");
 botao.onclick = verificar;
+
