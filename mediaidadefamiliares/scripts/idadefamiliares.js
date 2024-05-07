@@ -7,11 +7,19 @@ function mostra(frase) {
     pulaLinha();
 }
 
-var idadePedro = 28;
-var idadeMarta = 32;
-var idadeJorge = 60;
-var idadeBete = 22;
+var totalFamiliares = parseInt(prompt("Digite quantos familiares a sua família possui: "));
+var contador = 1;
+var totalIdades = 0
 
-var totalIdades = (idadePedro + idadeMarta + idadeJorge + idadeBete);
-var mediaIdades = totalIdades / 4;
-mostra(mediaIdades);
+while (contador <= totalFamiliares){
+    var idade = parseInt(prompt("Informe a idade do familiar: "));
+    contador++
+    totalIdades = totalIdades + idade;
+    mostra("Familiar " + (contador - 1) + " - " + idade + " anos de idade");
+}
+
+var mediaIdades = totalIdades / totalFamiliares;
+mostra("Você têm " + totalFamiliares + " familiares");
+mostra("A soma das idades é de " + totalIdades);
+mostra("A média das idades é de " + mediaIdades);
+mostra("Fim!");
