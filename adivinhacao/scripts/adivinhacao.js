@@ -7,7 +7,7 @@ function mostra(frase) {
     pulaLinha();
 }
 
-var numeroPensado = 4;
+var numeroPensado = Math.round(Math.random() * 10);
 
 var tentativas = 1;
 
@@ -16,12 +16,12 @@ while (tentativas <= 3){
     var chute = parseInt(prompt("Digite seu chute (números entre 0 e 10): "));
 
     if (chute == numeroPensado){
-        mostra('Você acertou!');
+        alert('Você acertou! O número pensado era ' + numeroPensado);
+        break;
     }else{
-        mostra('Você errou. Tente novamente');
+        alert('Você errou. Tente novamente');
     }
-
     tentativas++;
 }
 
-mostra("Fim!")
+alert("Fim!")
