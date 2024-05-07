@@ -12,10 +12,10 @@ function calculaImc(peso, altura) {
 }
 
 var nome = prompt("Informe seu nome: ");
-var alturaUsuario = prompt(nome + ", Informe a sua altura: ");
-var pesoUsuario = prompt(nome + ", Informe o seu peso: ");
+var alturaUsuario = parseFloat(prompt(nome + ", Informe a sua altura: "));
+var pesoUsuario = parseFloat(prompt(nome + ", Informe o seu peso: "));
 
-var imcUsuario = calculaImc(pesoUsuario, alturaUsuario);
+var imcUsuario = Math.round(calculaImc(pesoUsuario, alturaUsuario));
 
 mostra(nome + ", seu IMC é de " + imcUsuario);
 
