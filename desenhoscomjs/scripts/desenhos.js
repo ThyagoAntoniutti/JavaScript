@@ -43,4 +43,5 @@ pincel.fill();
 pincel.fillStyle = '#00ABBD';
 pincel.beginPath();
 pincel.arc(300, 200, 50, 0, 2 * 3.14);
-pincel.fill;
+pincel.fill();
+
