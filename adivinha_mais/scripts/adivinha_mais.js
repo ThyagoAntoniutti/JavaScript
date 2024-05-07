@@ -7,7 +7,25 @@ function mostra(frase) {
     pulaLinha();
 }
 
-var segredos = [5,7,10,2,3];
+function sorteio(){
+    Math.round(Math.random() * 10)
+}
+
+function sorteioNumeros(quantidade){
+    var segredos = [];
+    var numero = 1;
+    while (numero <= quantidade){
+        segredos.push(sorteio());
+        numero++;
+    }
+
+    return segredos;
+}
+
+
+var segredos = sorteioNumeros(3);
+
+console.log(segredos);
 
 var input = document.querySelector("input");
 input.focus();
