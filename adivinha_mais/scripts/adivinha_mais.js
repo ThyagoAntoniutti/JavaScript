@@ -1,12 +1,3 @@
-function pulaLinha() {
-    document.write("<br><br>");
-}
-
-function mostra(frase) {
-    document.write(frase);
-    pulaLinha();
-}
-
 function sorteia(){
     Math.round(Math.random() * 10)
 }
@@ -20,20 +11,22 @@ function sorteiaNumeros(quantidade){
     while (numero <= quantidade){
 
         var numeroAleatorio = sorteia();
-        var achou = false;
 
-        for (var posicao = 0; posicao < segredos.length; posicao++){
-            if (segredos[posicao] == numeroAleatorio){
-                achou = true;
-                break;
+        if (numeroAleatorio != 0){
+            var achou = false;
+
+            for (var posicao = 0; posicao < segredos.length; posicao++){
+                if (segredos[posicao] == numeroAleatorio){
+                    achou = true;
+                    break;
+                }
+            }
+    
+            if (achou == false){
+                segredos.push(numeroAleatorio);
+                numero++;
             }
         }
-
-        if (achou == false){
-            segredos.push(numeroAleatorio);
-            numero++;
-        }
-
     }
 
     return segredos;
