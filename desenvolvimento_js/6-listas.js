@@ -25,3 +25,9 @@ listaDeDestinos.push(); // este comando, .push serve para adicionarmos itens em 
 // iniciam em 0
 listaDeDestinos.splice(4,1);
 console.log(listaDeDestinos);
+
+// desta forma podemos imprimir um único elemento de nossa lista
+console.log(listaDeDestinos[3]);
+
+// também podemos exibir mais de um apenas separando-os por vírgula
+console.log(listaDeDestinos[3], listaDeDestinos[5]);
