@@ -22,7 +22,7 @@ const podeComprar = idadeComprador >= 18 || estaAcompanhada == true;
 
 let contador = 0;
 
-while (contador < length.listaDeDestinos) {
+while (contador < 7) {
     if (listaDeDestinos[contador] == destino){
         console.log("O destino ESTÁ disponível.");
     } else {
