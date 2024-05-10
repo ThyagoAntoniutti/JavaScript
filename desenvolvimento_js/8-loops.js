@@ -25,6 +25,7 @@ let contador = 0;
 while (contador < 7) {
     if (listaDeDestinos[contador] == destino){
         console.log("O destino ESTÁ disponível.");
+        break;
     } else {
         console.log("O destino NÃO ESTÁ disponível.");
     }
