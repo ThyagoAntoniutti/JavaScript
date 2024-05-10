@@ -12,9 +12,11 @@ const listaDeDestinos = new Array(
 
 const idadeComprador = 15;
 const estaAcompanhada = true;
+const temPassagemComprada = true;
 
 console.log("Destinos Disponíveis");
 console.log(listaDeDestinos);
+
 
 // if (idadeComprador >= 18) {
 //     // a pessoa é maior de idade
@@ -38,6 +40,15 @@ if (idadeComprador >= 18 || estaAcompanhada == true) {
 } else {
   // a pessoa é menor de idade
     console.log("Você é MENOR de idade. Não pode comprar");
+}
+
+// \n em um texto é um caractere de escape. podemos utiliza-lo para pular linhas
+console.log("Embarque: \n \n");
+
+if (idadeComprador >= 18 && temPassagemComprada == true) {
+    console.log("Boa viagem!");
+} else {
+    console.log("Você não pode embarcar.");
 }
 
 listaDeDestinos.splice(4, 1); // removendo item
