@@ -30,6 +30,6 @@ while (contador < 7) {
         console.log("O destino NÃO ESTÁ disponível.");
     }
 
-    contador++;
+    contador = contador + 1;
 
 }
