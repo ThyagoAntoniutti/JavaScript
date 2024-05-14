@@ -30,6 +30,14 @@ contaCorrenteAndre.agencia = 422;
 contaCorrenteAndre.conta = 84652;
 contaCorrenteAndre.digito = 3;
 
-
 console.log(contaCorrenteGuilherme);
 console.log(contaCorrenteAndre);
+
+contaCorrenteGuilherme.depositar(500);
+
+console.log(contaCorrenteGuilherme);
+
+contaCorrenteGuilherme.transferir(200, contaCorrenteAndre);
+
+console.log(contaCorrenteAndre);
+console.log(contaCorrenteGuilherme);

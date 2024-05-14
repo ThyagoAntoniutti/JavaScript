@@ -30,7 +30,8 @@ export class ContaCorrente {
         }
     }
 
-    transferir(valorTransferido) {
-
+    transferir(valorTransferido, contaTransferida) {
+        const valorSacado = this.sacar(valorTransferido);
+        contaTransferida.depositar(valorSacado);
     }
 }
