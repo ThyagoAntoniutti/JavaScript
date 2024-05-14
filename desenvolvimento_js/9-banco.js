@@ -17,6 +17,10 @@ class ContaCorrente {
         // que estamos trabalhando no momento, funcionando como um genérico
         if (this._saldo >= valorSacado) {
             this._saldo -= valorSacado;
+            // se não pedimos para retornar algo ele sempre vai retornar
+            // como undefined. além disso, o return vai fazer com que 
+            // o método em que ele está dentro pare de ser executado
+            return valorSacado;
         }
     }
 
@@ -52,5 +56,8 @@ contaCorrenteGuilherme.conta = 24653;
 contaCorrenteGuilherme.digito = 7;
 
 contaCorrenteGuilherme.depositar(300);
+const valorSacado = contaCorrenteGuilherme.sacar(50);
+
+console.log("Você sacou: " + valorSacado + " reais.");
 
 console.log(contaCorrenteGuilherme);
