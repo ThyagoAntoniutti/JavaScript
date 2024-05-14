@@ -39,3 +39,9 @@ while (contador < 7) {
 }
 
 console.log("O destino existe:", destinoExiste);
+
+if (podeComprar && destinoExiste) {
+    console.log("Tenha uma boa viagem!");
+} else {
+    console.log("Houston, temos um problema!");3
+}
