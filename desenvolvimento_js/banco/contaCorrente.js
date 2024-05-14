@@ -1,7 +1,10 @@
-class ContaCorrente {
+export class ContaCorrente {
+    cliente;
     agencia;
     conta;
     digito;
+
+
     // é uma convenção da comunidade utilizar um _ na frente do atributo
     // e isso quer dizer que este atributo é privado e não devemos manipula-lo diretamente
     _saldo = 0;
@@ -25,5 +28,9 @@ class ContaCorrente {
             this._saldo += valorDepositado;
             console.log("Foi depositado o valor de: " + this._saldo + " reais.");
         }
+    }
+
+    transferir(valorTransferido) {
+
     }
 }
