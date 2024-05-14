@@ -8,13 +8,15 @@ class ContaCorrente {
     agencia;
     conta;
     digito;
-    saldo;
+    // é uma convenção da comunidade utilizar um _ na frente do atributo
+    // e isso quer dizer que este atributo é privado e não devemos manipula-lo diretamente
+    _saldo = 0;
 
     sacar(valorSacado) {
         // neste caso usamos o this para dizer que estamos falando da conta
         // que estamos trabalhando no momento, funcionando como um genérico
-        if (this.saldo >= valorSacado) {
-            this.saldo -= valorSacado;
+        if (this._saldo >= valorSacado) {
+            this._saldo -= valorSacado;
         }
     }
 
@@ -22,7 +24,8 @@ class ContaCorrente {
         if (valorDepositado <= 0) {
             console.log("O valor digitado é inválido. Tente novamente!")
         } else {
-            this.saldo += valorDepositado;
+            this._saldo += valorDepositado;
+            console.log("Foi depositado o valor de: " + this._saldo + " reais.");
         }
     }
 }
@@ -47,7 +50,6 @@ const contaCorrenteGuilherme = new ContaCorrente();
 contaCorrenteGuilherme.agencia = 422;
 contaCorrenteGuilherme.conta = 24653;
 contaCorrenteGuilherme.digito = 7;
-contaCorrenteGuilherme.saldo = 0;
 
 contaCorrenteGuilherme.depositar(300);
 
