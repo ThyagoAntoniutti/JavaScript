@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("trabalhando com operadores aritméticos em JavaScript");
 
 /*
@@ -24,7 +26,6 @@ console.log("trabalhando com operadores aritméticos em JavaScript");
 // também a mesma coisa que
 // let num1, num2, num3;
 // num1 = num2 = num3 = 10;
-
 
 let num1 = 2;
 let num2 = 15;
