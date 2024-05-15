@@ -37,7 +37,9 @@ contaCorrenteGuilherme.depositar(500);
 
 console.log(contaCorrenteGuilherme);
 
-contaCorrenteGuilherme.transferir(200, contaCorrenteAndre);
+let valorTransferido = 200;
+contaCorrenteGuilherme.transferir(valorTransferido, contaCorrenteAndre);
+console.log("Valor Transferido: " + valorTransferido)
 
 console.log(contaCorrenteAndre);
 console.log(contaCorrenteGuilherme);
