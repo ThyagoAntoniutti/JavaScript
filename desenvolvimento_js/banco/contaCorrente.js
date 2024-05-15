@@ -10,6 +10,10 @@ export class ContaCorrente {
     _cliente;
     _saldo = 0;
 
+    get saldo() {
+        return this._saldo;
+    }
+
     set cliente(novoValor) {
         // instanceof quer dizer "instacia de". neste caso temos "SE o novo valor for uma INSTANCIA DE CLIENTE faça:"
         if (novoValor instanceof Cliente){
