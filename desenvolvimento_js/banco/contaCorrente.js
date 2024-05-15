@@ -16,6 +16,10 @@ export class ContaCorrente {
             this._cliente = novoValor;
         }
     } 
+
+    get cliente() {
+        return this._cliente;
+    }
     
 
     sacar(valorSacado) {

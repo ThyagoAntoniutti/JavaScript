@@ -49,3 +49,5 @@ console.log(contaCorrenteAndre);
 
 // console.log(contaCorrenteAndre);
 // console.log(contaCorrenteGuilherme);
+
+console.log(contaCorrenteAndre.cliente);
