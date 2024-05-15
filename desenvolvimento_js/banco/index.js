@@ -1,11 +1,7 @@
 import {Cliente} from "./cliente.js";
 import {ContaCorrente} from "./contaCorrente.js";
 
-const cliente1 = new Cliente();
-
-cliente1.nome = "Guilherme";
-cliente1.cpf = 11122233309;
-cliente1.rg = 123456789;
+const cliente1 = new Cliente("Guilherme", 11122233309);
 
 // const cliente2 = new Cliente();
 
@@ -51,3 +47,7 @@ console.log(contaCorrenteAndre);
 // console.log(contaCorrenteGuilherme);
 
 console.log(contaCorrenteAndre.saldo);
+
+const cliente3 = new Cliente("Marcos", 45678912323);
+
+console.log(cliente3);
