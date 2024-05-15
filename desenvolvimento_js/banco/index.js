@@ -24,10 +24,10 @@ contaCorrenteGuilherme.conta = 24653;
 contaCorrenteGuilherme.digito = 7;
 
 const contaCorrenteAndre = new ContaCorrente();
-contaCorrenteAndre.cliente = new Cliente();
-contaCorrenteAndre.cliente.nome = "André";
-contaCorrenteAndre.cliente.cpf = 44455566609;
-contaCorrenteAndre.cliente.rg = 456789123;
+contaCorrenteAndre.cliente = cliente1;
+contaCorrenteAndre.agencia = 123;
+contaCorrenteAndre.conta = 456789;
+contaCorrenteAndre.digito = 4;
 
 
 contaCorrenteAndre.agencia = 422;

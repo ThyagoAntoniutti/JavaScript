@@ -1,5 +1,5 @@
+import {Cliente} from "./cliente.js";
 export class ContaCorrente {
-    cliente;
     agencia;
     conta;
     digito;
@@ -7,7 +7,16 @@ export class ContaCorrente {
 
     // é uma convenção da comunidade utilizar um _ na frente do atributo
     // e isso quer dizer que este atributo é privado e não devemos manipula-lo diretamente
+    _cliente;
     _saldo = 0;
+
+    set cliente(novoValor) {
+        // instanceof quer dizer "instacia de". neste caso temos "SE o novo valor for uma INSTANCIA DE CLIENTE faça:"
+        if (novoValor instanceof Cliente){
+            this._cliente = novoValor;
+        }
+    } 
+    
 
     sacar(valorSacado) {
         // neste caso usamos o this para dizer que estamos falando da conta
