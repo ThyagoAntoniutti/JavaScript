@@ -21,4 +21,4 @@ console.log(n++);
 console.log(++n);
 
 // neste caso ele opera a variável, ele vai realmente opera-la, seja 
-// como pré incremento ou pós incremento
+// como pré incremento ou pós incremento 
