@@ -46,3 +46,25 @@ let valores = [1, 5, 4, 10];
 // soma com cada valor. cada valor será aplicado para cada proprierdade da função,
 // para cada parâmetro de entrada da função
 console.log(soma(...valores));
+
+// isto retornará uma coleção de elementos
+// neste caso estamos pegando os elementos da tag div
+// ou seja, dentro de objs temos uma coleção de objetos div que estão dentro da página
+// aqui temos um html collection com 3 elementos. um html collection APENAS RECEBE 
+// elementos HTML
+const objs1 = document.getElementsByTagName("div");
+
+// agora vamos fazer o teste utilizando o spread
+// já aqui temos um array de elementos e neste caso podemos adicionar qualquer coisa dentro
+// deste array, como number ou string e as funções para operarmos aqui são diferentes também
+const objs2 = [...document.getElementsByTagName("div")];
+
+// não podemos rodar isso no node ou no power shall pois ele não conhece o document
+// como ele não conhece a página, se rodarmos em um deles irá dar o erro document is
+// not defined. porém no navegador ele retorna um html collection com 3 posições
+// aqui temos um html collection com 3 elementos. um html collection APENAS RECEBE 
+// elementos HTML
+console.log(objs1);
+// já aqui temos um array de elementos e neste caso podemos adicionar qualquer coisa dentro
+// deste array, como number ou string e as funções para operarmos aqui são diferentes também
+console.log(objs2);
