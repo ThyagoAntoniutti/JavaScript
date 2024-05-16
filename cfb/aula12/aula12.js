@@ -40,7 +40,7 @@ const soma = (v1, v2, v3) => {
     return v1 + v2 + v3;
 }
 
-let valores = [1, 5, 4];
+let valores = [1, 5, 4, 10];
 
 // já neste caso, quando usamos o spread ele irá espalhar os valores e realizar a
 // soma com cada valor. cada valor será aplicado para cada proprierdade da função,
