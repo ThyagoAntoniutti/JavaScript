@@ -68,3 +68,17 @@ console.log(objs1);
 // já aqui temos um array de elementos e neste caso podemos adicionar qualquer coisa dentro
 // deste array, como number ou string e as funções para operarmos aqui são diferentes também
 console.log(objs2);
+
+// se escrevermos objs1. e objs2. veremos que as opções que teremos de manipulação são diferentes
+// no caso do obsj1. ele terá muuuito menos opções do que o obsj2. pois são as mesmas opções que
+// trabalhamos com array
+
+// SE PRECISARMOS PERCORRER UMA COLEÇÃO
+// neste caso da obsj1 ele irá retornar um erron pois o for each não é reconhecido para html collection
+// objs1.array.forEach(element => {
+//     console.log(element);
+// });
+
+objs2.array.forEach(element => {
+    console.log(element);
+});
