@@ -75,10 +75,13 @@ console.log(objs2);
 
 // SE PRECISARMOS PERCORRER UMA COLEÇÃO
 // neste caso da obsj1 ele irá retornar um erron pois o for each não é reconhecido para html collection
-// objs1.array.forEach(element => {
-//     console.log(element);
-// });
-
-objs2.array.forEach(element => {
+objs1.forEach(element => {
     console.log(element);
+});
+
+// já no caso do obsj2. ao usarmos o for each ele irá retornar exatamente quais elementos temos ali
+// naquele array. desta forma conseguimos trabalhar com estess elementos
+// assim podemos por exemplo alterar os elementos utilizando o innerHTML
+objs2.forEach(element => {
+    element.innerHTML="Curso";
 });
