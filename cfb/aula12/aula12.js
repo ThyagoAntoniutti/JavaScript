@@ -85,3 +85,6 @@ objs1.forEach(element => {
 objs2.forEach(element => {
     element.innerHTML="Curso";
 });
+
+console.log(objs2);
+console.log(obsj1);
