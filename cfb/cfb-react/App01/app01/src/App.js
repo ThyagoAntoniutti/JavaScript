@@ -1,8 +1,4 @@
 import React from 'react';
-import Header from './componentes/Header';
-import Corpo from './componentes/Corpo';
-import Dados from './componentes/Dados';
-
 
 // Essa primeira linha é a linha de importação da biblioteca React, do conteudo react para que possamos trabalhar dentro desse arquivo.
 // Toda vez que colocamos um código aqui ele vai consultar isso lá dentro da biblioteca React.
@@ -15,15 +11,16 @@ export default function App() {
   return (
     // Essa função precisa retornar alguma coisa para quem fez a chamada dessa função. Para quem está fazendo o uso dessa função ela precisa retornar alguma coisa.
     // Todo o conteúdo dentro do retun é chamado de JSX. É uma extensão que nos permite trabalhar com HTML, CSS, JavaScript tudo em um bolo só para exportar tudo de uma vez também.
-    // Dentro desse código, sempre que queremos usar alguma expressão do JavaScript devemos utilizar as {}
-    // Começando a trabalhar com PROPS. Basicamente é uma forma de enviarmos informações para um determinado componente.
+    // Dentro desse código, sempre que queremos usar al uma forma de enviarmos informações para um determinado componente.
     // Podemos enviar valores, padrões, constantes, funções para um componente filho usando os atributos do componente 
-    // capturando pelo PROPS
+    // capturando pelo PROPSguma expressão do JavaScript devemos utilizar as {}
+    // Começando a trabalhar com PROPS. Basicamente é
     // Como enviamos dados para um componente? Bom,basicamente precisamos ir para o componente e colocarmos dentro dos parenteses da função e dizer que ele irá utilizar props.
     // Depois, precisamos criar os nomes dos atributos junto do chamamento do componente aqui no JavaScript. Nesse caso os nomes não precisam ser iguais ao que temo lá no componente, pois são os nomes dos atributos. Porém lá, ao usarmos o valor desses atributos, precisamos usar os mesmos nomes definidos para os componentes.
     <>
-      <Header/>
-      <Corpo/>
+      <h1>Entendendo o funcionamento do React</h1>
+      <h2>Aplicando estilos com CSS no React</h2>
+      <p>Vamos tentar fazer o uso de estilos utilizando o CSS aqui dentro do React</p>
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
     // Outro detalhe é que não podemos ter tags não finalizadas dentro do react. No HTML5 não somos obrigados a colocar a barra finalizadora para indicar o fim do componente, porém, no React isso é uma OBRIGAÇÃO. Quando o comando não tem uma tag de fechamento precisamos colocar a mesma para que não tenhamos problemas.

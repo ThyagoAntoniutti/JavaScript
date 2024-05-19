@@ -1,12 +1,12 @@
 import React from 'react';
-import jim from './imgs/jim.jpg';
+import dunder from './imgs/dunder.png';
 
 // Cada componente SÓ PODE RETORNAR UMA TAG
 export default function Header() {
     return (
         <header>
-            <img src={jim} alt='Jim Halpert olhando através da persiana da janela do refeitório para Andy após ter pregado uma peça nele durante o Episódio'></img>
-            <h1>Jim Halpert em um de seus melhores momentos em The Office</h1>
+            <img src={dunder} alt='Logo da empresa Dunder Miflin Paper Company'></img>
+            <h1>Dunder Mifflin Paper Company</h1>
         </header>
     )
 }
