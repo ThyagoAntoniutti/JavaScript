@@ -9,3 +9,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.caixa a {
+  text-decoration: none;
+  color: rgb(40, 94, 94);
+  font-size: 3em;
+}
+
+.caixa a:hover {
+  background-color: rgb(100, 52, 52);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+}

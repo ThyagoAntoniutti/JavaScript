@@ -1,4 +1,5 @@
 import React from 'react';
+import Relogio from './componentes/Relogio';
 
 // Para importar o CSS externo não utilizamos o padrão de importação visto anteriormente. Basicamente precisamos apenas colocar o import e o nome do arquivo. css. Não precisamos especificar um nome. Além disso, quando estamos trabalhando com um CSS externo para o React voltamos a utilzar o CSS normalmente, com a mesma sintaxe que sempre utilizamos.
 import './App.css';
@@ -31,11 +32,14 @@ export default function App() {
     // PARTICULARIDADES: No CSS tradicional utilizamos o - para separarmos palavras compostas. No React, ao aplicarmos um estilo, usamos o padrão camelCase caso seja uma palavra composta em vez do -. Além disso, caso apliquemos mais de um estilo na mesma linha, por exemplo cor e fonte, separamos estes elementos utilizando a vírgula.
     // PARTICULARIDADES: Aqui no React não chamamos apenas class para chamarmos uma classe do CSS. Em vez disso utilizamos className e então o nome da classe que iremos aplicar o estilo.
     // PARTICULARIDADES: Quando vamos aplicar um estilo ao body, podemos fazer isso tanto criando um arquivo CSS externo dentro do public quanto podemos fazer inline.
+    // RENDERIZAÇÃO DOS COMPONENTES EM REACT: Um dos motivos do React ter um bom desempenho é que ele só renderiza os elementos que sofreram alterações. 
     <>
     <section className='caixa'>
+      <Relogio className='relogio'/>
       <h1 style={{color: 'red', fontSize: '5em'}}>Entendendo o funcionamento do React</h1>
       <h2 style={tituloSecundario}>Aplicando estilos com CSS no React</h2>
       <p className='texto'>Vamos tentar fazer o uso de estilos utilizando o CSS aqui dentro do React</p>
+      <a href='https://en.wikipedia.org/wiki/Dunder_Mifflin' className='linkWiki'>Dunder Mifflin Paper Company</a>
     </section>
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
