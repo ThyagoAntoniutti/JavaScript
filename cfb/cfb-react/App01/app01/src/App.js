@@ -1,10 +1,20 @@
 import React from 'react';
 
+// Para importar o CSS externo não utilizamos o padrão de importação visto anteriormente. Basicamente precisamos apenas colocar o import e o nome do arquivo. css. Não precisamos especificar um nome. Além disso, quando estamos trabalhando com um CSS externo para o React voltamos a utilzar o CSS normalmente, com a mesma sintaxe que sempre utilizamos.
+import './App.css';
+
 // Essa primeira linha é a linha de importação da biblioteca React, do conteudo react para que possamos trabalhar dentro desse arquivo.
 // Toda vez que colocamos um código aqui ele vai consultar isso lá dentro da biblioteca React.
 
 // Feito a importação, precisamos dar início a criação da função do nosso aplicativo. Por boa prática, o nome dessa função tem O MESMO NOME do arquivo.
 export default function App() {
+
+  // Outra forma de aplicarmos os estilos é utilizando constantes e aplicando-as depois dentro da classe style, como no exemplo abaixo
+
+  const tituloSecundario = {
+    color: 'blue',
+    fontSize: '3em'
+  }
 
   // Podemos também fazer concatenações entre variáveis e as PROPS
   
@@ -17,10 +27,13 @@ export default function App() {
     // Começando a trabalhar com PROPS. Basicamente é
     // Como enviamos dados para um componente? Bom,basicamente precisamos ir para o componente e colocarmos dentro dos parenteses da função e dizer que ele irá utilizar props.
     // Depois, precisamos criar os nomes dos atributos junto do chamamento do componente aqui no JavaScript. Nesse caso os nomes não precisam ser iguais ao que temo lá no componente, pois são os nomes dos atributos. Porém lá, ao usarmos o valor desses atributos, precisamos usar os mesmos nomes definidos para os componentes.
+    // ESTILIZAÇÃO. Assim como quando trabalhamos apenas com HTML e CSS, no React também podemos incluir estilos através das 3 formas já conhecidas, sendo elas inline, incorporado e externo. PORÉM, a documentação oficial do React sugere que demos a preferência ao uso de classes para estilização. Então, na maioria das vezes faremos o uso das classes seguindo a recomendação da documentação. Abaixo faremos os 3 estilos para relembrar.
+    // PARTICULARIDADES: No CSS tradicional utilizamos o - para separarmos palavras compostas. No React, ao aplicarmos um estilo, usamos o padrão camelCase caso seja uma palavra composta em vez do -. Além disso, caso apliquemos mais de um estilo na mesma linha, por exemplo cor e fonte, separamos estes elementos utilizando a vírgula.
+    // PARTICULARIDADES: Aqui no React não chamamos apenas class para chamarmos uma classe do CSS. Em vez disso utilizamos className e então o nome da classe que iremos aplicar o estilo.
     <>
-      <h1>Entendendo o funcionamento do React</h1>
-      <h2>Aplicando estilos com CSS no React</h2>
-      <p>Vamos tentar fazer o uso de estilos utilizando o CSS aqui dentro do React</p>
+      <h1 style={{color: 'red', fontSize: '5em'}}>Entendendo o funcionamento do React</h1>
+      <h2 style={tituloSecundario}>Aplicando estilos com CSS no React</h2>
+      <p className='texto'>Vamos tentar fazer o uso de estilos utilizando o CSS aqui dentro do React</p>
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
     // Outro detalhe é que não podemos ter tags não finalizadas dentro do react. No HTML5 não somos obrigados a colocar a barra finalizadora para indicar o fim do componente, porém, no React isso é uma OBRIGAÇÃO. Quando o comando não tem uma tag de fechamento precisamos colocar a mesma para que não tenhamos problemas.
