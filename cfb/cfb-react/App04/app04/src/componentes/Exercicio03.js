@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function Exercicio03() {
+
+    const [temperatura, setTemperatura] = useState();
+
+    let conversao = (parseFloat(temperatura) - 32) * (5 / 9);
+
     return (
+
         <>
             <section className="container">
 
@@ -12,7 +18,12 @@ export default function Exercicio03() {
 
                 <main className="containerDados">
                     <section className="dados">
-                        <label>Temperatura em °F:</label><input type="number" className="textoTemperatura"/>
+                        <label>Temperatura em °F:</label>
+                        <input type="number" 
+                        name="temperatura"
+                        value={temperatura}
+                        onChange={(e) => setTemperatura(e.target.value)}
+                        className="textoTemperatura"/>
                     </section>
 
                     <section className="dados">
@@ -22,7 +33,7 @@ export default function Exercicio03() {
                 </main>
 
                 <footer>
-                    <p>Resultado da Conversão</p>
+                    <p>Resultado da Conversão: {conversao} °Celsius</p>
                 </footer>
             </section>
         </>
