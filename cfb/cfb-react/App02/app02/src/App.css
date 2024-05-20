@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.dados {
+  display: flex;
+}
+
+.legendaCampos {
+  margin-bottom: 5px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.campoTexto {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(218, 218, 218);
+  background-color: rgb(206, 206, 206);
   color: white;
+  font-size: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.botao {
+  margin: 30px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.botaoCalcular {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(181, 201, 224);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: 0.2s;
+}
+
+.botaoCalcular:hover {
+  cursor: pointer;
+  width: 110px;
+  height: 50px;
+  transition: 0.2s;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dadosUsuario {
+  display: flex;
+}
+
+.containerResultados {
+  display: flex;
+}
+
+.textoResultados {
+  margin-right: 20px;
+  background-color: rgb(134, 218, 134);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.textoDadosUsuario {
+  margin-right: 20px;
+  background-color: rgb(146, 158, 207);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
