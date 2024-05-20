@@ -37,22 +37,22 @@ export default function Exercicio01() {
 
                     <section className="dadosUsuario">
                         <p className="textoResultados">Idade:</p>
-                        <p className="textoDadosUsuario">Idade Usuario</p>
+                        <p className="textoDadosUsuario">Idade</p>
                     </section>
 
                     <section className="dadosUsuario">
                         <p className="textoResultados">Peso:</p>
-                        <p className="textoDadosUsuario">Peso Usuário</p>
+                        <p className="textoDadosUsuario">Peso</p>
                     </section>
 
                     <section className="dadosUsuario">
                         <p className="textoResultados">Altura:</p>
-                        <p className="textoDadosUsuario">Altura Usuário</p>
+                        <p className="textoDadosUsuario">Altura</p>
                     </section>
 
                     <section className="dadosUsuario">
                         <p className="textoResultados">Resultado IMC:</p>
-                        <p className="textoDadosUsuario">IMC Usuário</p>
+                        <p className="textoDadosUsuario">IMC</p>
                     </section>
 
                 </section>
