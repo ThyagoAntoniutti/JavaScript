@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Freeman&family=Signika:wght@300..700&display=swap');
 .container {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,9 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
+  font-family:  "Signika", sans-serif;
+  font-weight: 500;
+  color: rgb(56, 56, 56);
 }
 
 .dados {
@@ -26,8 +30,8 @@
   height: 30px;
   border-radius: 5px;
   border: 1px solid rgb(218, 218, 218);
-  background-color: rgb(206, 206, 206);
-  color: white;
+  background-color: rgb(228, 228, 228);
+  color: rgb(104, 104, 104);
   font-size: 1em;
 }
 
@@ -39,11 +43,13 @@
   width: 100px;
   height: 40px;
   background-color: rgb(181, 201, 224);
-  color: white;
   border: none;
   border-radius: 5px;
   font-size: 1.2em;
   transition: 0.2s;
+  font-family:  "Signika", sans-serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 
 .botaoCalcular:hover {

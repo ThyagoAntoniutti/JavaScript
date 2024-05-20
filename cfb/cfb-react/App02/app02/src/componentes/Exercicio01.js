@@ -6,242 +6,248 @@ export default function Exercicio01() {
     const [peso, setPeso] = useState ();
     const [altura, setAltura] = useState();
     const [genero, setGenero] = useState();
+    const [caracterizacao, setCaracterizacao] = useState();
+    const [diagnostico, setDiagnostico] = useState();
 
-    let imcFinal;
+   const imcFinal = parseFloat(peso) / (parseFloat(altura) * parseFloat(altura));
 
-    function calcularImc() {
-
-        imcFinal = parseFloat(peso) / (parseFloat(altura) * parseFloat(altura));
-        console.log(imcFinal.toFixed(2));
+    const calcularImc=()=> {
 
         if (idade > 60) {
 
-            console.log("Devido a sua idade, você é caracterizado como IDOSO.");
+            setCaracterizacao("Devido a sua idade, você é caracterizado como IDOSO.");
                 
             if (imcFinal < 22) {
-                console.log("Você está abaixo do peso ideal. Procure um profisional especializado...");
+                setDiagnostico("Você está abaixo do peso ideal. Procure um profisional especializado...");
             } else if (imcFinal >= 22 && imcFinal <= 27) {
-                console.log("Você está com o peso ideal...");
+                setDiagnostico("Você está com o peso ideal...");
             } else {
-                console.log("Você está com sobrepeso. Procure um profisional especializado...");
+                setDiagnostico("Você está com sobrepeso. Procure um profisional especializado...");
             }
+
         } else if (idade > 15 && idade <= 60) {
-            console.log("Devido a sua idade (" + idade + " anos), você é caracterizado como ADULTO.");
+
+            setCaracterizacao("Devido a sua idade (" + idade + " anos), você é caracterizado como ADULTO.");
+
             if (imcFinal < 18.5) {
-                console.log("MAGREZA. Seu IMC está muito baixo. Procure por ajuda especializada");
+                setDiagnostico("MAGREZA. Seu IMC está muito baixo. Procure por ajuda especializada");
             } else if (imcFinal >= 18.5 && imcFinal <= 24.9) {
-                console.log("NORMAL. Você está com o peso ideal.");
+                setDiagnostico("NORMAL. Você está com o peso ideal.");
             } else if (imcFinal >= 25 && imcFinal <= 29.9) {
-                console.log("SOBREPESO. Você está com sobrepeso. Procure por ajuda especializada");
+                setDiagnostico("SOBREPESO. Você está com sobrepeso. Procure por ajuda especializada");
             } else if (imcFinal >= 30 && imcFinal <= 39.9) {
-                console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada imediatamente.");
+                setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada imediatamente.");
             } else if (imcFinal >= 40) {
-                console.log("OBESIDADE GRAVE. Você se encontra em estado de OBESIDADE GRAVE. Procure por ajuda especializada imediatamente.");
+                setDiagnostico("OBESIDADE GRAVE. Você se encontra em estado de OBESIDADE GRAVE. Procure por ajuda especializada imediatamente.");
             }
         } else if (idade <= 15 && genero === 'Masculino') {
-            console.log("Devido a sua idade (" + idade + " anos), você é caracterizado como CRIANÇA do sexo " + genero + ".");
+
+            setCaracterizacao("Devido a sua idade (" + idade + " anos), você é caracterizado como CRIANÇA do sexo " + genero + ".");
+
             if (idade === 6) {
                 if (imcFinal < 14.5) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 14.5 && imcFinal <= 16.6) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 16.7 && imcFinal <= 18) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 18) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 7) {
                 if (imcFinal < 15) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 15 && imcFinal <= 17.3) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 17.4 && imcFinal <= 19.1) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 19.1) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 8) {
                 if (imcFinal < 15.6) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 15.6 && imcFinal <= 16.7) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 16.8 && imcFinal <= 20.3) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 20.3) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 9) {
                 if (imcFinal < 16.1) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 16.1 && imcFinal <= 18.8) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 18.9 && imcFinal <= 21.4) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 21.4) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 10) {
                 if (imcFinal < 16.7) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 16.7 && imcFinal <= 19.6) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 19.7 && imcFinal <= 22.5) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 22.5) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 11) {
                 if (imcFinal < 17.2) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 17.2 && imcFinal <= 20.3) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 20.4 && imcFinal <= 23.7) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 23.7) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 12) {
                 if (imcFinal < 17.8) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 17.8 && imcFinal <= 21.1) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 21.2 && imcFinal <= 24.8) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 24.8) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 13) {
                 if (imcFinal < 18.5) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 18.5 && imcFinal <= 21.9) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 22 && imcFinal <= 25.9) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 25.9) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 14) {
                 if (imcFinal < 19.2) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 19.2 && imcFinal <= 22.7) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 22.8 && imcFinal <= 26.9) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 26.9) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 15) {
                 if (imcFinal < 19.9) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 19.9 && imcFinal <= 23.6) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 23.7 && imcFinal <= 27.7) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 27.7) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             }
         } else if (idade <= 15 && genero === 'Feminino') {
-            console.log("Devido a sua idade (" + idade + " anos), você é caracterizado como CRIANÇA do sexo " + genero + ".");
+
+            setCaracterizacao("Devido a sua idade (" + idade + " anos), você é caracterizado como CRIANÇA do sexo " + genero + ".");
+
             if (idade === 6) {
                 if (imcFinal < 14.3) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 14.3 && imcFinal <= 16.1) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 16.2 && imcFinal <= 17.4) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 17.4) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 7) {
                 if (imcFinal < 14.9) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 14.9 && imcFinal <= 17.1) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 17.2 && imcFinal <= 18.9) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 18.9) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 8) {
                 if (imcFinal < 15.6) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 15.6 && imcFinal <= 18.1) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 18.2 && imcFinal <= 20.3) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 20.3) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 9) {
                 if (imcFinal < 16.3) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 16.3 && imcFinal <= 19.1) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 19.2 && imcFinal <= 21.7) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 21.7) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 10) {
                 if (imcFinal < 17) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 17 && imcFinal <= 20.1) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 20.2 && imcFinal <= 23.2) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 23.2) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 11) {
                 if (imcFinal < 17.6) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 17.6 && imcFinal <= 22.1) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 22.2 && imcFinal <= 25.9) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 25.9) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 12) {
                 if (imcFinal < 18.3) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 18.3 && imcFinal <= 22.1) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 22.2 && imcFinal <= 25.9) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 25.9) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 13) {
                 if (imcFinal < 18.9) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 18.9 && imcFinal <= 23) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 23.1 && imcFinal <= 27.7) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 27.7) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 14) {
                 if (imcFinal < 19.3) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 19.3 && imcFinal <= 23.8) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 23.9 && imcFinal <= 27.9) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 27.9) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             } else if (idade === 15) {
                 if (imcFinal < 19.6) {
-                    console.log("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
+                    setDiagnostico("ABAIXO DO NORMAL. Seu IMC se encontra ABAIXO DO NORMAL. Procure por ajuda especializada.");
                 } else if (imcFinal >= 19.6 && imcFinal <= 24.2) {
-                    console.log("NORMAL. Você está com o peso ideal.")
+                    setDiagnostico("NORMAL. Você está com o peso ideal.")
                 } else if (imcFinal >= 24.3 && imcFinal <= 28.8) {
-                    console.log("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
+                    setDiagnostico("SOBREPESO. Você está com SOBREPESO. Procure por ajuda especializada.");
                 } else if (imcFinal > 28.8) {
-                    console.log("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
+                    setDiagnostico("OBESIDADE. Você se encontra em estado de OBESIDADE. Procure por ajuda especializada.");
                 }
             }
         }
@@ -305,7 +311,7 @@ export default function Exercicio01() {
                 </section>
 
                 <section className="botao">
-                    <button className="botaoCalcular" onClick={calcularImc()}>Calcular</button>
+                    <button className="botaoCalcular" onClick={()=>calcularImc()}>Calcular</button>
                 </section>
                 
             </main>
@@ -336,14 +342,14 @@ export default function Exercicio01() {
 
                     <section className="dadosUsuario">
                         <p className="textoResultados">Resultado IMC:</p>
-                        <p className="textoDadosUsuario">{Math.round(imcFinal)}</p>
+                        <p className="textoDadosUsuario">{imcFinal.toFixed(2)}</p>
                     </section>
 
                 </section>
 
                 <section className="textoResultadoFinal">
-                    <p>Caracterização</p>
-                    <p>Diagnóstico</p>
+                    <p>{caracterizacao}</p>
+                    <p>{diagnostico}</p>
                 </section>
 
             </footer>
