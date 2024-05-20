@@ -9,26 +9,29 @@ import './App.css';
 // Feito a importação, precisamos dar início a criação da função do nosso aplicativo. Por boa prática, o nome dessa função tem O MESMO NOME do arquivo.
 export default function App() {
 
-  const [log, setLog] = useState(false);
+  const [cor, setCor] = useState(1);
 
-  const msgLogin = () => {
-    return 'Usuário logado!';
-  }
+  const vermelho = {color: '#f00'};
+  const verde = {color: '#0f0'};
+  const azul = {color: '#00f'};
 
-  const msgLogoff = () => {
-    return 'Você precisa fazer o login';
-  }
-
-  const saudacoes = () => {
-    const hora = new Date().getHours();
-    if (hora >= 0 && hora < 13) {
-      return <p>BOM DIA VIETNAM!</p>
-    } else if (hora >= 13 && hora < 18) {
-      return <p>Boa tarde!</p>
+  const retornaCor = (cor) => {
+    if (cor === 1){
+      return vermelho;
+    } else if (cor === 2) {
+      return verde;
     } else {
-      return <p>Boa noite!</p>
+      return azul;
     }
   }
+
+  const mudarCor = () => {
+    setCor(cor + 1);
+    if (cor > 2) {
+      setCor(1);
+    }
+  }
+
 
   // Outra forma de aplicarmos os estilos é utilizando constantes e aplicando-as depois dentro da classe style, como no exemplo abaixo
 
@@ -53,11 +56,8 @@ export default function App() {
     // STATE: Basicamente é um elemento que armazena valores de propriedades que pertencem ao componente. Quando esses objetos tem seu estado alterado, esses objetos são renderizados novamente. Isso não ocorre com variáveis comuns. Usamos o STATE quando precisamos associar um valor da tela com uma variável de forma que quando mudarmos o valor dessa variável nós precisemos também que esse valor seja mostrado, renderizado. Antigamente só se podia usar STATES em componentes de classe, mas, com o implemento de rooks na linguagem, agora podemos usar STATE em componentes funcionais. Se a alteração de uma variável ocorre em programação ela não é mostrada, e é ai que entra o STATE. Quando criamos um botão e colocamos que ao clicar o valor de n1 se tornará aquele, não será alterado na tela, não será renderizado. 
     // EVENTOS: Não tem muita diferença quando trabalhamos com HTML puro para o React. A ideia é a mesma. 
     <>
-
-      <h1>Dunder Mifflin Paper Company</h1>
-      {saudacoes()}
-      <p>{log ? msgLogin() : msgLogoff()}</p>
-      <button onClick={() => setLog(!log)}>{log ? 'Logoff' : 'Login'}</button>
+      <h1 style={retornaCor(cor)}>Dunder Mifflin Paper Company</h1>
+      <button onClick={() => mudarCor()}>Mudar Cor do Papel</button>
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
     // Outro detalhe é que não podemos ter tags não finalizadas dentro do react. No HTML5 não somos obrigados a colocar a barra finalizadora para indicar o fim do componente, porém, no React isso é uma OBRIGAÇÃO. Quando o comando não tem uma tag de fechamento precisamos colocar a mesma para que não tenhamos problemas.
