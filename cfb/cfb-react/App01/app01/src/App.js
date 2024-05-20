@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 // Para importar o CSS externo não utilizamos o padrão de importação visto anteriormente. Basicamente precisamos apenas colocar o import e o nome do arquivo. css. Não precisamos especificar um nome. Além disso, quando estamos trabalhando com um CSS externo para o React voltamos a utilzar o CSS normalmente, com a mesma sintaxe que sempre utilizamos.
 import './App.css';
@@ -8,6 +8,16 @@ import './App.css';
 
 // Feito a importação, precisamos dar início a criação da função do nosso aplicativo. Por boa prática, o nome dessa função tem O MESMO NOME do arquivo.
 export default function App() {
+
+  const [log, setLog] = useState(false);
+
+  const msgLogin = () => {
+    return 'Usuário logado!';
+  }
+
+  const msgLogoff = () => {
+    return 'Você precisa fazer o login';
+  }
 
   const saudacoes = () => {
     const hora = new Date().getHours();
@@ -46,6 +56,8 @@ export default function App() {
 
       <h1>Dunder Mifflin Paper Company</h1>
       {saudacoes()}
+      <p>{log ? msgLogin() : msgLogoff()}</p>
+      <button onClick={() => setLog(!log)}>{log ? 'Logoff' : 'Login'}</button>
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
     // Outro detalhe é que não podemos ter tags não finalizadas dentro do react. No HTML5 não somos obrigados a colocar a barra finalizadora para indicar o fim do componente, porém, no React isso é uma OBRIGAÇÃO. Quando o comando não tem uma tag de fechamento precisamos colocar a mesma para que não tenhamos problemas.
