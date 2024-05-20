@@ -5,9 +5,10 @@
 
 .caixa {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
+  height: 800px;
+
 }
 
 .caixa a {
@@ -25,4 +26,36 @@
 
 .relogio {
   font-size: 5em;
+}
+
+.imagem {
+  width: 500px;
+  margin: 0px 20px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.imagem:hover {
+  width: 550px;
+  transition: 0.2s;
+}
+
+.botao {
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  font-size: 27px;
+  border: none;
+  background-color: rgb(112, 112, 112);
+  color: white;
+  transition: 0.2s;
+}
+
+.botao:hover {
+  cursor: pointer;
+  width: 210px;
+  height: 90px;
+  transition: 0.2s;
 }
