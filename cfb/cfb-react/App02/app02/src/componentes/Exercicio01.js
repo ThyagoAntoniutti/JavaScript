@@ -11,19 +11,19 @@ export default function Exercicio01() {
 
     function calcularImc() {
 
-        imcFinal = peso / (altura * altura);
-        console.log(imcFinal);
+        imcFinal = parseFloat(peso) / (parseFloat(altura) * parseFloat(altura));
+        console.log(imcFinal.toFixed(2));
 
         if (idade > 60) {
 
             console.log("Devido a sua idade, você é caracterizado como IDOSO.");
                 
             if (imcFinal < 22) {
-                return <p>Você está abaixo do peso ideal. Procure um profisional especializado...</p>
+                console.log("Você está abaixo do peso ideal. Procure um profisional especializado...");
             } else if (imcFinal >= 22 && imcFinal <= 27) {
-                return <p>Você está com o peso ideal...</p>
+                console.log("Você está com o peso ideal...");
             } else {
-                return <p>Você está com sobrepeso. Procure um profisional especializado...</p>
+                console.log("Você está com sobrepeso. Procure um profisional especializado...");
             }
         } else if (idade > 15 && idade <= 60) {
             console.log("Devido a sua idade (" + idade + " anos), você é caracterizado como ADULTO.");
