@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Relogio from './componentes/Rel';
+import Numero from './componentes/Numero';
 
 // Para importar o CSS externo não utilizamos o padrão de importação visto anteriormente. Basicamente precisamos apenas colocar o import e o nome do arquivo. css. Não precisamos especificar um nome. Além disso, quando estamos trabalhando com um CSS externo para o React voltamos a utilzar o CSS normalmente, com a mesma sintaxe que sempre utilizamos.
 import './App.css';
@@ -14,12 +14,7 @@ export default function App() {
 
   // Para usarmos state precisamos criar uma variável const, o nome do estado ([num]) e junto a funlçao ([num,setNum])
   const [num, setNum] = useState(10);
-
-  let n1 = 50;
-  const n100 = () => {
-    n1 = 100;
-    console.log(n1);
-  }
+  const [nome, setNome] = useState('Thyago');
 
   // Podemos também fazer concatenações entre variáveis e as PROPS
   
@@ -39,9 +34,9 @@ export default function App() {
     // RENDERIZAÇÃO DOS COMPONENTES EM REACT: Um dos motivos do React ter um bom desempenho é que ele só renderiza os elementos que sofreram alterações. 
     // STATE: Basicamente é um elemento que armazena valores de propriedades que pertencem ao componente. Quando esses objetos tem seu estado alterado, esses objetos são renderizados novamente. Isso não ocorre com variáveis comuns. Usamos o STATE quando precisamos associar um valor da tela com uma variável de forma que quando mudarmos o valor dessa variável nós precisemos também que esse valor seja mostrado, renderizado. Antigamente só se podia usar STATES em componentes de classe, mas, com o implemento de rooks na linguagem, agora podemos usar STATE em componentes funcionais. Se a alteração de uma variável ocorre em programação ela não é mostrada, e é ai que entra o STATE. Quando criamos um botão e colocamos que ao clicar o valor de n1 se tornará aquele, não será alterado na tela, não será renderizado. 
     <>
-      <p>Valor do state num: {num}</p>
-      <p>Vaor do n1: {n1}</p>
-      <button onClick={() => n100}>100</button>
+      <p>Valor do state num em App: {num}</p>
+      <Numero num = {num} setNum = {setNum}/>
+      <p>{nome}</p>
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
     // Outro detalhe é que não podemos ter tags não finalizadas dentro do react. No HTML5 não somos obrigados a colocar a barra finalizadora para indicar o fim do componente, porém, no React isso é uma OBRIGAÇÃO. Quando o comando não tem uma tag de fechamento precisamos colocar a mesma para que não tenhamos problemas.
