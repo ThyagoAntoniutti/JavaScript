@@ -7,7 +7,7 @@ export default function Exercicio02() {
     const [nota3, setNota3] = useState();
     const [nota4, setNota4] = useState();
 
-    let soma = parseInt(nota1) + parseInt(nota2) + parseInt(nota3) + parseInt(nota4)
+    let soma = parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4);
     let media = soma / 4;
     console.log(media);
 
@@ -69,7 +69,7 @@ export default function Exercicio02() {
                     </section>
 
                     <section>
-                        <p>{media}</p>
+                        <p>{media.toFixed(2)}</p>
                     </section>
                     
                 </main>
