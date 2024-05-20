@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.containerNotas {
+  display: flex;
+}
+
+.nota {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.textoNota {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(147, 199, 219);
   color: white;
+  font-size: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.botaoCalcular {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(159, 199, 159);
+  color: white;
+  font-size: 1em;
+  margin-top: 50px;
+  transition: 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.botaoCalcular:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: rgb(106, 133, 106);
+
 }
