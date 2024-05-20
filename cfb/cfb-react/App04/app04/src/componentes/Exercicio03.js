@@ -33,7 +33,7 @@ export default function Exercicio03() {
                 </main>
 
                 <footer>
-                    <p>Resultado da Conversão: {conversao} °Celsius</p>
+                    <p>Resultado da Conversão: {conversao.toFixed(2)} °Celsius</p>
                 </footer>
             </section>
         </>
