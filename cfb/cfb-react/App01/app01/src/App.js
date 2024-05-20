@@ -32,6 +32,8 @@ export default function App() {
     }
   }
 
+  setInterval(mudarCor, 1000);
+
 
   // Outra forma de aplicarmos os estilos é utilizando constantes e aplicando-as depois dentro da classe style, como no exemplo abaixo
 
@@ -57,7 +59,6 @@ export default function App() {
     // EVENTOS: Não tem muita diferença quando trabalhamos com HTML puro para o React. A ideia é a mesma. 
     <>
       <h1 style={retornaCor(cor)}>Dunder Mifflin Paper Company</h1>
-      <button onClick={() => mudarCor()}>Mudar Cor do Papel</button>
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
     // Outro detalhe é que não podemos ter tags não finalizadas dentro do react. No HTML5 não somos obrigados a colocar a barra finalizadora para indicar o fim do componente, porém, no React isso é uma OBRIGAÇÃO. Quando o comando não tem uma tag de fechamento precisamos colocar a mesma para que não tenhamos problemas.
