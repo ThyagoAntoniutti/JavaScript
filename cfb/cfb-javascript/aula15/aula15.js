@@ -19,6 +19,12 @@ console.log("Trabalhando com loops de repetição - LOOP FOR");
 //    iterados pelo código
 //}
 
+// Devemos cuidar para não entrar em uma rotina de loop infinito
+
+console.log("Início do programa");
+
 for (let i = 0; i < 10; i++) {
-    console.log("Entendendo o funcionamento do FOR");
+    console.log("Entendendo o funcionamento do FOR - valor do i: " + i);
 }
+
+console.log("Fim do programa");
