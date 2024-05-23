@@ -24,6 +24,11 @@ console.log("Trabalhando com loops de repetição - LOOP FOR");
 console.log("Início do programa");
 
 for (let i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+        console.log(i + " é par");
+    } else {
+        console.log(i + " é ímpar")
+    }
     console.log("Entendendo o funcionamento do FOR - valor do i: " + i);
 }
 
