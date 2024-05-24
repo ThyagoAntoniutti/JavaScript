@@ -8,7 +8,19 @@ console.log("Início do programa");
 
 let n = 0;
 
+// ESTRUTURA do WHILE - while (condição) {
+// bloco de código}
 while (n < 10) {
     console.log(n);
     n++;
 }
+
+let n5 = 10;
+let fat = 1;
+
+while (n5 >= 1) {
+    fat *= n5;
+    n5--;
+}
+
+console.log(fat);
