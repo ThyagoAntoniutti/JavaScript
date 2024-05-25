@@ -13,12 +13,18 @@ console.log("Entendendo o funcionamento de BREAK e CONTINUE");
 let n = 0;
 let max = 1000;
 
-while (n < max) {
-    console.log("Desenvolimento de Sistemas - " + n);
-    if (n > 10) {
-        break;
-    }
-    n++
+// while (n < max) {
+//     console.log("Desenvolimento de Sistemas - " + n);
+//     if (n > 10) {
+//         break;
+//     }
+//     n++
+// }
+
+// console.log("Fim do programa");
+
+for (let i = n; n < max; i++) {
+    console.log("Desenvolvimento de Sistemas - " + i);
 }
 
-console.log("Fim do programa");
+console.log("Fim do programa")
