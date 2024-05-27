@@ -15,3 +15,18 @@ console.log("Trabalhando com FUNÇÕES");
     // Bloco de código
 
 //}
+
+function nome() {
+    console.log("Thyago Capeleti");
+}
+
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
+nome(); // Esta é a chamada da função
