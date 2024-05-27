@@ -16,5 +16,16 @@ function soma(...valores) {
     }
     return resultado;
 }
+
+function teste(...valores) {
+    let res = 0; 
+    // Com o FOR OF criamos uma variável v para percorrer a lista valores
+    // Neste caso não precisamos controlar o tamanho da lista valores como no for tradicional
+    for (let v of valores) {
+        res += v;
+    }
+    return res;
+}
 // Se apenas dermos o console.log abaixo ele vai apenas retornar 5, sendo a quantidade de valores e não a soma de 10 com 5 com 2 com 15 com 8
 console.log(soma(10, 5, 2, 15, 8));
+console.log(teste(10, 5, 2, 15, 8));
