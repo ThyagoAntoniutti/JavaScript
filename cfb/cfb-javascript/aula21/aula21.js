@@ -18,4 +18,4 @@ exemplo("Thyago");
 exemplo("Capeleti");
 exemplo("Sistemas de Informação");
 
-soma(10, 15);
+soma(10, 5);
