@@ -17,16 +17,27 @@ console.log("Trabalhando com FUNÇÕES");
 //}
 
 function nome() {
-    console.log("Thyago Capeleti");
+    for (let i = 0; i < 10; i++) {
+        console.log("Thyago Capeleti");
+    }
 }
 
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
-nome(); // Esta é a chamada da função
+nome();
+
+function soma(n1, n2) {
+    let soma = n1 + n2;
+    console.log(soma);
+}
+
+soma(5, 10);
+
+function mudarTexto() {
+    let d1 = document.getElementById("d1");
+    let d2 = document.getElementById("d2");
+    let d3 = document.getElementById("d3");
+    d1.innerHTML = "Thyago Capeleti";
+    d2.innerHTML = "Thyago Capeleti";
+    d3.innerHTML = "Thyago Capeleti";
+}
+
+mudarTexto();
