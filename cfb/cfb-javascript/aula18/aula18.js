@@ -12,6 +12,7 @@ console.log("Entendendo o funcionamento de BREAK e CONTINUE");
 
 let n = 0;
 let max = 1000;
+let pares = 0;
 
 // while (n < max) {
 //     console.log("Desenvolimento de Sistemas - " + n);
@@ -23,8 +24,14 @@ let max = 1000;
 
 // console.log("Fim do programa");
 
-for (let i = n; n < max; i++) {
+for (let i = n; i < max; i++) {
     console.log("Desenvolvimento de Sistemas - " + i);
+    // Quando ele testar, vai ver que é diferente de 0 então é ímpar, então, ele não irá entrar no pares++, indo assim para o próximo. Ele fará o incremento só quando for false
+    if (i % 2 != 0) {
+        continue;
+    }
+    pares++;
 }
 
-console.log("Fim do programa")
+console.log("Quantidade de pares - " + pares);
+console.log("Fim do programa");
