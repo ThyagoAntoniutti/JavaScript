@@ -1,6 +1,18 @@
-"use strict"
+"use strict";
 
 console.log("Trabalhando com FUNÇÕES PARAMETRIZADAS");
+let valor = 0;
+
+console.log(valor);
+
+function add(v) {
+    return valor + v;
+}
+
+// Podemos atribuir um valor a uma variável através de uma função também
+valor = add(10);
+console.log(valor);
+
 
 // Podemos definir uma variável para o valor padrão, assim se quisermos alterar esse valor, fazemos isto apenas uma vez
 const valorPadrao = 0;
