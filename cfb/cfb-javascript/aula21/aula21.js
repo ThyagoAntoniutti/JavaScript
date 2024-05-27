@@ -1,6 +1,6 @@
 "use strict"
 
-console.log("Trabalhando com FUNÇÕES que RETORNAM valors");
+console.log("Trabalhando com FUNÇÕES PARAMETRIZADAS");
 
 function trampo() {
     let n1 = 10;
