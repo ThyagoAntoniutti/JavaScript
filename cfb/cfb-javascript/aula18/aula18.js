@@ -24,6 +24,9 @@ let pares = 0;
 
 // console.log("Fim do programa");
 
+// BREAK PARA A EXECUÇÃO IMEDIATA DO LOOP (SAI DO LOOP) E CONTINUA A EXECUÇÃO DO PROGRAMA
+// CONTINUE SÓ PARA A ITERAÇÃO ATUAL, PASSANDO PARA A PRÓXIMA ITERAÇÃO DO LOOP, CONTINUANDO AINDA DENTRO DO LOOP
+
 for (let i = n; i < max; i++) {
     console.log("Desenvolvimento de Sistemas - " + i);
     // Quando ele testar, vai ver que é diferente de 0 então é ímpar, então, ele não irá entrar no pares++, indo assim para o próximo. Ele fará o incremento só quando for false
