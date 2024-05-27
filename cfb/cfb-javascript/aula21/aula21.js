@@ -5,6 +5,8 @@ let valor = 0;
 
 console.log(valor);
 
+// Por mais que a variável esteja fora da função, podemos opera-la e seu resultado será
+// substituido após a chamada da função
 function add(v) {
     return valor + v;
 }
