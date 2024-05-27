@@ -40,4 +40,3 @@ function mudarTexto() {
     d3.innerHTML = "Thyago Capeleti";
 }
 
-mudarTexto();
