@@ -1,3 +1,4 @@
+console.log('Entendendo o getElementById.')
 // get element by id - usado para obtermos um elemento específico através do ID
 
 const c1 = document.getElementById('c1');
