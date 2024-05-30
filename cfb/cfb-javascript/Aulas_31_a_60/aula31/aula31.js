@@ -12,5 +12,11 @@ const arrayElementos = [c1, c2, c3, c4, c5, c6];
 // Tag name retorna uma coleção de elementos
 const colecaoHTML = document.getElementsByTagName('div');
 
-console.log(arrayElementos);
 console.log(colecaoHTML);
+
+colecaoHTML.map ((e) => {
+    console.log(e);
+})
+
+// console.log(arrayElementos);
+// console.log(colecaoHTML);
