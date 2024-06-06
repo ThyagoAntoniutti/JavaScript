@@ -10,6 +10,6 @@ caixa1.addEventListener('click',(evento) => {
     
 })
 
-// btn_c1.addEventListener('click',() => {
-//     console.log('clicou');
-// })
+btn_c1.addEventListener('click',(evento) => {
+    evento.stopPropagation;
+})
