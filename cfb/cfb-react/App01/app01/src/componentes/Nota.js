@@ -5,6 +5,11 @@ export default function Nota(props){
         <>
         <div>
             <legend>Informe a nota:</legend>
+            <input 
+            type="text" 
+            value='' 
+            onChange=''
+            />
         </div>
         </>
     )

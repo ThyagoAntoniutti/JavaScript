@@ -11,6 +11,9 @@ export default function elevacaoState(){
     return(
         <>      
         <Nota/>
+        <Nota/>
+        <Nota/>
+        <Nota/>
         </>
     )   
 }
