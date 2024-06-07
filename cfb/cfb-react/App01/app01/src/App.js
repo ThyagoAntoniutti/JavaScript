@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import Formulario from './componentes/Formulario';
+import Elevacao from './componentes/elevacaoState';
 
 // Para importar o CSS externo não utilizamos o padrão de importação visto anteriormente. Basicamente precisamos apenas colocar o import e o nome do arquivo. css. Não precisamos especificar um nome. Além disso, quando estamos trabalhando com um CSS externo para o React voltamos a utilzar o CSS normalmente, com a mesma sintaxe que sempre utilizamos.
 import './App.css';
@@ -9,7 +11,11 @@ import './App.css';
 // Feito a importação, precisamos dar início a criação da função do nosso aplicativo. Por boa prática, o nome dessa função tem O MESMO NOME do arquivo.
 export default function App() {
 
-  const [nome, setNome] = useState('');
+  // const [nome, setNome] = useState('Guguzinho Xablau');
+  // const [carro, setCarro] = useState('Fiat Fastback');
+  // const handleChangeNome = (e) => {
+  //   setNome(e.target.value);
+  // }
 
 
   // Outra forma de aplicarmos os estilos é utilizando constantes e aplicando-as depois dentro da classe style, como no exemplo abaixo
@@ -36,14 +42,23 @@ export default function App() {
     // EVENTOS: Não tem muita diferença quando trabalhamos com HTML puro para o React. A ideia é a mesma.
     // FORMULÁRIOS: Um pouco diferente do HTML. Fazemos o uso do STATE. Basicamente, podemos criar um STATE para cada elemento do formulário ou um STATE recebendo uma lista de elementos. Precisamos associar o elemento do formulário a um STATE para que possamos inserir esse valor e usa-lo em outro lugar do aplicativo
     <>
-      <label>Digite seu Nome:</label>
+      {/* <label>Digite seu Nome:</label><br></br>
       <input 
         type='text' 
         name='fnome'
         value={nome} // Associamos ao STATE que queremos utilizar
         onChange={(e) => setNome(e.target.value)} // Associamos a função de manipulação do STATE usando uma arrow function para chamar a função. E o parâmetro que a função recebe é o value, pois por mais que ele tenha o STATE atribuido, ele se altera conforme digitamos no input e depois, usamos o atributo do nchange (e) para que ele possa puxar o valor do value para a função setNome. Dessa forma capturamos o que foi digitado e passamos para o STATE
-      />
+      /><br></br>
+      <label>Selecione um carro:</label><br></br>
+      <select value={carro} onChange={(e) => setCarro(e.target.value)}>
+        <option value='Fiat Uno'>Fiat Uno</option>
+        <option value='Fiat Toro'>Fiat Toro</option>
+        <option value='Fiat Fastback'>Fiat Fastback</option>
+        <option value='Fiat Cronos'>Fiat Cronos</option>
+      </select><br></br>
       <p>Nome Digitado: {nome}</p>
+      <p>Carro Selecionado: {carro}</p> */}
+      <Elevacao/>
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
     // Outro detalhe é que não podemos ter tags não finalizadas dentro do react. No HTML5 não somos obrigados a colocar a barra finalizadora para indicar o fim do componente, porém, no React isso é uma OBRIGAÇÃO. Quando o comando não tem uma tag de fechamento precisamos colocar a mesma para que não tenhamos problemas.
