@@ -14,19 +14,19 @@ import './App.css';
 // Feito a importação, precisamos dar início a criação da função do nosso aplicativo. Por boa prática, o nome dessa função tem O MESMO NOME do arquivo.
 export default function App() {
 
-  const [nome, setNome] = useState();
+  // const [nome, setNome] = useState();
 
-  const armazenar = (chave, valor) => {
-    localStorage.setItem(chave, valor)
-  }
+  // const armazenar = (chave, valor) => {
+  //   localStorage.setItem(chave, valor)
+  // }
 
-  const consultar = (chave) => {
-    alert(localStorage.getItem(chave));
-  }
+  // const consultar = (chave) => {
+  //   alert(localStorage.getItem(chave));
+  // }
 
-  const apagar = (chave) => {
-    localStorage.removeItem(chave);
-  }
+  // const apagar = (chave) => {
+  //   localStorage.removeItem(chave);
+  // }
 
   // Aqui estamos criando uma chave. Se essa chave ja existe, estamos adicionando o valor a esta chave. Ele troca o valor que já existia
   // (nome da chave, valor da chave) ---> (nome da chave 'Nome', valor da chave 'Thyago')
@@ -104,6 +104,8 @@ export default function App() {
     // LOCA STORAGE --> Basicamente é um armazenamento local no browser, onde podemos armazenar informações, recuperar e apagar o que guardamos ali.
     
     // LOCAL STORAGE --> Tem basicamente 3 funções, 1 - Criar a chave valor (set item) / 2 - Recuperar a chave valor (get item) / 3 - Remover a chave valor (remove item)
+
+    // COMPONENTES DE CLASSE --> 
     <>
       {/* <label>Digite seu Nome:</label><br></br>
       <input 
@@ -133,11 +135,13 @@ export default function App() {
       </ContencaoCaixa> */}
       {/* <p>Contagem: {contagem}</p>
       <button onClick={() => setContagem(contagem + 1)}>Contar</button> */}
-      <label>Digite um nome: </label><br></br>
+      {/*<label>Digite um nome: </label><br></br>
       <input type='text' value={nome} onChange={(e) => setNome(e.target.value)}></input><br></br>
       <button onClick={() => armazenar('ls_nome',nome)}>Gravar Nome</button>
       <button onClick={() => consultar('ls_nome')}>Consultar Nome</button>
-      <button onClick={() => apagar('ls_nome')}>Remover Nome</button>
+      <button onClick={() => apagar('ls_nome')}>Remover Nome</button> */}
+      <h1>Componentes de Classe</h1>
+      
     </>
     // Um detalhe importante que precisa ser observado é que só podemos retorar um componente. Se tentarmos exportar uma div ele vai dar erro. Não podemos retornar / exportar mais de um componente. Todos os componentes que temos no app precisam vir dentro deste único componente representado acima pelos sinais de menor e maior. 
     // Outro detalhe é que não podemos ter tags não finalizadas dentro do react. No HTML5 não somos obrigados a colocar a barra finalizadora para indicar o fim do componente, porém, no React isso é uma OBRIGAÇÃO. Quando o comando não tem uma tag de fechamento precisamos colocar a mesma para que não tenhamos problemas.
